@@ -6,39 +6,63 @@ import SEO from "../components/seo"
 
 const DemoPage = () => (
   <div>
-    <h1>demo</h1>
-    <p>Welcome to demo page</p>
-    <p className="uppercase tracking-wide text-sm text-indigo-600 font-bold">Marketing</p>
 
-    <button className="btn btn-red">
-      Button
-    </button>
+    <section className="flex flex-col  h-screen   bg-black">
+      <header className="h-20 flex items-center  header bg-black w-full text-white">
+        <div className="logo ml-5 flex-grow ">ΣΩΤΗΡΗΣ </div>
+        <nav className="flex mr-5">
+          <a className="px-2" href="http://www.google.com">Blog</a>
+          <a className="px-2" href="http://www.google.com">Projects</a>
+          <a className="px-2" href="http://www.google.com">Listen</a>
+          <a className="px-2" href="http://www.google.com">Listen</a>
 
-    <div className="my-5">
-    <div className="bg-indigo-900 text-center py-4 lg:px-4">
-      <div className="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
-           role="alert">
-        <span className="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">New</span>
-        <span
-          className="font-semibold mr-2 text-left flex-auto">Get the coolest t-shirts from our brand new store</span>
-        <svg className="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-          <path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/>
-        </svg>
+        </nav>
+
+      </header>
+
+      <div className="h-full flex flex-col justify-center items-center top-content bg-green-500 ">
+
+        <div className="flex flex-col w-200">
+           <h2 className="text-center text-white text-2xl">Section 1</h2>
+           <p className="text-center text-green-200">subtitle</p>
+        </div>
+
       </div>
-    </div>
-    </div>
+    </section>
 
 
-    <div className="my-5 mx-10">
-    <div role="alert">
-      <div className="bg-red-500 text-white font-bold rounded-t px-4 py-2">
-        Danger
+
+    <section className="flex flex-col  h-screen   bg-red-300">
+
+      <div className="h-full flex flex-col justify-center items-center top-content bg-blue-500 ">
+
+        <div className="flex flex-col w-200">
+          <h2 className="text-center text-white text-2xl">Section 2</h2>
+          <p className="text-center text-green-200">subtitle</p>
+        </div>
+
       </div>
-      <div className="border border-t-0 border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700">
-        <p>Something not ideal might be happening.</p>
+    </section>
+
+    <section className="flex flex-col  h-screen   bg-red-300">
+
+      <div className="h-full flex flex-col justify-center items-center top-content bg-red-500 ">
+
+        <div className="flex flex-col w-200">
+          <h2 className="text-center text-white text-2xl">Section 3</h2>
+          <p className="text-center text-green-200">subtitle</p>
+        </div>
+
       </div>
-    </div>
-    </div>
+    </section>
+
+
+
+
+
+
+
+
 
   </div>
 )
