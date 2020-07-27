@@ -1,4 +1,6 @@
 import React from "react"
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
@@ -10,8 +12,8 @@ const DemoPage = () => (
     <section className="flex flex-col  h-screen   bg-black">
       <header className="h-20 flex items-center  header bg-black w-full text-white">
         <div className="logo ml-5 flex-grow ">ΣΩΤΗΡΗΣ </div>
-        <nav className="flex mr-5">
-          <a className="px-2" href="http://www.google.com">Blog</a>
+        <nav className="flex mr-5 uppercase">
+          <AnchorLink to="/demo#blog" title="Our team" stripHash><span>Blog</span></AnchorLink>
           <a className="px-2" href="http://www.google.com">Projects</a>
           <a className="px-2" href="http://www.google.com">Listen</a>
           <a className="px-2" href="http://www.google.com">Listen</a>
@@ -32,12 +34,12 @@ const DemoPage = () => (
 
 
 
-    <section className="flex flex-col  h-screen   bg-red-300">
+    <section id="blog" className="flex flex-col  h-screen   bg-red-300">
 
       <div className="h-full flex flex-col justify-center items-center top-content bg-blue-500 ">
 
         <div className="flex flex-col w-200">
-          <h2 className="text-center text-white text-2xl">Section 2</h2>
+          <h2 className="text-center text-white text-2xl">BLOG</h2>
           <p className="text-center text-green-200">subtitle</p>
         </div>
 

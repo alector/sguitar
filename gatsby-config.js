@@ -5,7 +5,15 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
-    `gatsby-plugin-postcss`,
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: 0,
+        duration: 1000,
+
+      }
+    },
+      `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
