@@ -4,9 +4,9 @@ import NavbarLinks from "./NavbarLinks"
 import Logo from "./Logo"
 
 const Navigation = styled.nav`
-  height: 10vh;
+  height: 90px;
   display: flex;
-  background-color: #fff;
+  background-color: #000;
   position: relative;
   justify-content: space-between;
   text-transform: uppercase;
@@ -43,21 +43,23 @@ const Navbox = styled.div`
   justify-content: flex-end;
   align-items: center;
 
+
   @media (max-width: 768px) {
     flex-direction: column;
     position: fixed;
     width: 100%;
     justify-content: flex-start;
     padding-top: 10vh;
-    background-color: #fff;
     transition: all 0.3s ease-in;
     top: 8vh;
     left: ${props => (props.open ? "-100%" : "0")};
+    background-color:#000;
+
   }
 `
 
 const Hamburger = styled.div`
-  background-color: #111;
+  background-color: #fff;
   width: 30px;
   height: 3px;
   transition: all 0.3s linear;
@@ -67,9 +69,10 @@ const Hamburger = styled.div`
 
   ::before,
   ::after {
+  
     width: 30px;
     height: 3px;
-    background-color: #111;
+    background-color: #fff;
     content: "";
     position: absolute;
     transition: all 0.3s linear;
@@ -101,7 +104,7 @@ const Navbar = () => {
       </Toggle>
       {navbarOpen ? (
         <Navbox>
-          <NavbarLinks />
+          <NavbarLinks cellphonesize={navbarOpen}/>
         </Navbox>
       ) : (
         <Navbox open>

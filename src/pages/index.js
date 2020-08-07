@@ -17,18 +17,34 @@ const H1 = styled.h1`
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <H1>
-      Full walkthrough available{" "}
-      <a href="https://snopkowski.com/blog/gatsby-navigation-styled-components">
-        here
-      </a>
-    </H1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+
+
+
+
+<section id="blog" className="flex flex-col  h-screen   bg-red-300">
+
+  <div className="h-full flex flex-col justify-center items-center top-content bg-blue-500 ">
+
+    <div className="flex flex-col w-200">
+      <h2 className="text-center text-white text-2xl">BLOG</h2>
+      <p className="text-center text-green-200">subtitle</p>
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
+
+  </div>
+</section>
+
+<section id="projects" className="flex flex-col  h-screen   bg-red-300">
+
+  <div className="h-full flex flex-col justify-center items-center top-content bg-red-500 ">
+
+    <div className="flex flex-col w-200">
+      <h2 className="text-center text-white text-2xl">PROJECTS</h2>
+      <p className="text-center text-green-200">subtitle</p>
+    </div>
+
+  </div>
+</section>
+
   </Layout>
 )
 

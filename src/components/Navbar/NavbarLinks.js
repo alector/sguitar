@@ -4,12 +4,16 @@ import { Link } from "gatsby"
 
 const NavItem = styled(Link)`
   text-decoration: none;
-  color: #111;
+  font-family: "Roboto";
+  font-weight: 700;
   display: inline-block;
   white-space: nowrap;
   margin: 0 1vw;
   transition: all 200ms ease-in;
   position: relative;
+  
+  color: #78757a;
+
 
   :after {
     position: absolute;
@@ -19,13 +23,14 @@ const NavItem = styled(Link)`
     width: 0%;
     content: ".";
     color: transparent;
-    background: goldenrod;
-    height: 1px;
+    background: #fff;
+    height: 2px;
     transition: all 0.4s ease-in;
   }
 
   :hover {
-    color: goldenrod;
+    color: #fff;
+
     ::after {
       width: 100%;
     }
@@ -33,17 +38,17 @@ const NavItem = styled(Link)`
 
   @media (max-width: 768px) {
     padding: 20px 0;
-    font-size: 1.5rem;
+    font-size: 1rem;
     z-index: 6;
   }
 `
-const NavbarLinks = () => {
+const NavbarLinks = (props) => {
   return (
     <>
-      <NavItem to="/">About</NavItem>
-      <NavItem to="/404">Services</NavItem>
-      <NavItem to="/">Gallery</NavItem>
-      <NavItem to="/404">Contact</NavItem>
+      <NavItem cellphonesize={props.cellphonesize} to="/">About</NavItem>
+      <NavItem cellphonesize={props.cellphonesize} to="/404">Services</NavItem>
+      <NavItem cellphonesize={props.cellphonesize} to="/">Gallery</NavItem>
+      <NavItem cellphonesize={props.cellphonesize} to="/404">Contact</NavItem>
     </>
   )
 }
