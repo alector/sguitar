@@ -6,6 +6,7 @@
  */
 
 import React from "react"
+
 // import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -27,7 +28,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <div
+
+        <div
         style={{
           margin: `0 auto`,
           padding: `0px`,
@@ -36,9 +38,7 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer>
-          Â© {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          © {new Date().getFullYear()}
         </footer>
       </div>
     </>

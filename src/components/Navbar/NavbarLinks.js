@@ -1,6 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+
+
+const NavItemWrap = styled.div`
+text-decoration:none;
+`
 
 const NavItem = styled(Link)`
   text-decoration: none;
@@ -42,13 +48,30 @@ const NavItem = styled(Link)`
     z-index: 6;
   }
 `
+
+const newHandle = () => {
+   console.log("CLICKED!!!!")
+
+}
 const NavbarLinks = (props) => {
   return (
     <>
-      <NavItem cellphonesize={props.cellphonesize} to="/">About</NavItem>
-      <NavItem cellphonesize={props.cellphonesize} to="/404">Services</NavItem>
-      <NavItem cellphonesize={props.cellphonesize} to="/">Gallery</NavItem>
-      <NavItem cellphonesize={props.cellphonesize} to="/404">Contact</NavItem>
+      <NavItemWrap onClick={() => props.setNavbarOpen(false)}>
+        <NavItem to="/#biography" as={AnchorLink}>About</NavItem>
+      </NavItemWrap>
+
+      <NavItemWrap onClick={() => props.setNavbarOpen(false)}>
+        <NavItem as={AnchorLink}  to="/#social">Social</NavItem>
+      </NavItemWrap>
+
+      <NavItemWrap onClick={() => props.setNavbarOpen(false)}>
+        <NavItem as={AnchorLink}  to="/#projects">Projects</NavItem>
+      </NavItemWrap>
+
+      <NavItemWrap onClick={() => props.setNavbarOpen(false)}>
+        <NavItem as={AnchorLink}  to="/#teaching">Teaching</NavItem>
+      </NavItemWrap>
+
     </>
   )
 }

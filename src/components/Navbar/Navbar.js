@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import NavbarLinks from "./NavbarLinks"
 import Logo from "./Logo"
+import Headroom from "react-headroom"
 
 const Navigation = styled.nav`
   height: 90px;
@@ -48,6 +49,7 @@ const Navbox = styled.div`
     flex-direction: column;
     position: fixed;
     width: 100%;
+
     justify-content: flex-start;
     padding-top: 10vh;
     transition: all 0.3s ease-in;
@@ -59,7 +61,7 @@ const Navbox = styled.div`
 `
 
 const Hamburger = styled.div`
-  background-color: #fff;
+  background-color:  ${props => (props.open ? "blue" : "#fff")};
   width: 30px;
   height: 3px;
   transition: all 0.3s linear;
@@ -93,24 +95,58 @@ const Hamburger = styled.div`
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
+  // function navbarHandler (navbarOpen,setNavbarOpen) {
+  //   this.setState({
+  //     navbarOpen, setNavbarOpen
+  //   })
+  // }
+
+
+  const navbarHandler = () => {
+    console.log("=========")
+    console.log("Prev: " + navbarOpen)
+
+    setNavbarOpen(navbarOpen => !navbarOpen)
+    console.log("Αfter: " + navbarOpen)
+
+  }
+
   return (
-    <Navigation>
+
+  <Navigation>
       <Logo />
+
       <Toggle
+        // Inside Toggle we put the button <Hamburger>
+        // Χ  It is <Hamburger open> when we press Toggle & navbarOpen is true
+        // ≡  It is just <Hamburger> when navbarOpen is false
+        // Navbox εμφανίζεται και εξαφανίζεται
+
+        // navbarOpen = true (when the menu closes!!!)
         navbarOpen={navbarOpen}
-        onClick={() => setNavbarOpen(!navbarOpen)}
+        onClick = {navbarHandler}
+        // onClick={() => setNavbarOpen(!navbarOpen)}
       >
         {navbarOpen ? <Hamburger open /> : <Hamburger />}
       </Toggle>
       {navbarOpen ? (
-        <Navbox>
-          <NavbarLinks cellphonesize={navbarOpen}/>
-        </Navbox>
+          <Navbox>
+            <p>BLA BLA</p>
+            <NavbarLinks navbarHandler navbarOpen setNavbarOpen={setNavbarOpen} cellphonesize={navbarOpen}
+
+
+
+            />
+          </Navbox>
+
       ) : (
-        <Navbox open>
-          <NavbarLinks />
+
+        <Navbox  open>
+          <p>BLIX BLIX</p>
+          <NavbarLinks setNavbarOpen={setNavbarOpen} />
         </Navbox>
-      )}
+
+          )}
     </Navigation>
   )
 }
