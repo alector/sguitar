@@ -28,7 +28,7 @@ const DemoPage = () => {
 
     <section className="flex flex-col  h-screen   bg-black">
 
-      <Headroom>
+      <Headroom disableInlineStyles>
         <div className="h-20 flex items-center  header bg-black w-full text-white">
           <div className="logo ml-5 flex-grow ">ΣΩΤΗΡΗΣ </div>
 

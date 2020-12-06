@@ -47,21 +47,24 @@ const Navbox = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: column;
+    height: 92vh;
+    
     position: fixed;
+    top: 8vh;
+    left: ${props => (props.open ? "-100%" : "0")};
+
     width: 100%;
 
     justify-content: flex-start;
     padding-top: 10vh;
     transition: all 0.3s ease-in;
-    top: 8vh;
-    left: ${props => (props.open ? "-100%" : "0")};
     background-color:#000;
 
   }
 `
 
 const Hamburger = styled.div`
-  background-color:  ${props => (props.open ? "blue" : "#fff")};
+  background-color:  ${props => (props.open ? "transparent" : "#fff")};
   width: 30px;
   height: 3px;
   transition: all 0.3s linear;
@@ -113,7 +116,10 @@ const Navbar = () => {
 
   return (
 
-  <Navigation>
+<Headroom disableInlineStyles>
+  
+  <Navigation  >
+
       <Logo />
 
       <Toggle
@@ -131,7 +137,7 @@ const Navbar = () => {
       </Toggle>
       {navbarOpen ? (
           <Navbox>
-            <p>BLA BLA</p>
+            
             <NavbarLinks navbarHandler navbarOpen setNavbarOpen={setNavbarOpen} cellphonesize={navbarOpen}
 
 
@@ -142,12 +148,16 @@ const Navbar = () => {
       ) : (
 
         <Navbox  open>
-          <p>BLIX BLIX</p>
+         
           <NavbarLinks setNavbarOpen={setNavbarOpen} />
         </Navbox>
 
           )}
+
+
     </Navigation>
+</Headroom>
+
   )
 }
 

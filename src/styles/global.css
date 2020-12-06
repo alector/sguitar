@@ -22,21 +22,65 @@
     left: 0;
     right: 0;
     zIndex: 1;
+    background-color:transparent;
 }
 .headroom--unfixed {
     position: relative;
 
     transform: translateY(0);
+
 }
 .headroom--scrolled {
-
     transition: transform 200ms ease-in-out;
+
+
 }
 .headroom--unpinned {
     position: fixed;
     transform: translateY(-100%);
+
+
 }
 .headroom--pinned {
     position: fixed;
     transform: translateY(0%);
 }
+
+  @media (max-width: 768px) {
+
+    .headroom--unpinned {
+        position: fixed;
+/*        
+        height:100%;
+        transform: translateY(0);
+*/    
+}
+.headroom--scrolled {
+position: fixed;
+top:0px;
+
+
+}
+    .headroom--pinned {
+        position: fixed;
+
+        
+/*        
+        transform: translateY(0);
+        */
+
+        
+
+    }
+
+
+
+  }
+
+
+
+
+
+
+
+
