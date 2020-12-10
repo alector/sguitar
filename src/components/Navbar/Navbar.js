@@ -3,7 +3,6 @@ import styled from "styled-components"
 import NavbarLinks from "./NavbarLinks"
 import Logo from "./Logo"
 import Headroom from "react-headroom"
-
 const Navigation = styled.nav`
   height: 90px;
   display: flex;
@@ -44,11 +43,10 @@ const Navbox = styled.div`
   justify-content: flex-end;
   align-items: center;
 
-
   @media (max-width: 768px) {
     flex-direction: column;
     height: 92vh;
-    
+
     position: fixed;
     top: 8vh;
     left: ${props => (props.open ? "-100%" : "0")};
@@ -58,13 +56,12 @@ const Navbox = styled.div`
     justify-content: flex-start;
     padding-top: 10vh;
     transition: all 0.3s ease-in;
-    background-color:#000;
-
+    background-color: #000;
   }
 `
 
 const Hamburger = styled.div`
-  background-color:  ${props => (props.open ? "transparent" : "#fff")};
+  background-color: ${props => (props.open ? "transparent" : "#fff")};
   width: 30px;
   height: 3px;
   transition: all 0.3s linear;
@@ -74,7 +71,6 @@ const Hamburger = styled.div`
 
   ::before,
   ::after {
-  
     width: 30px;
     height: 3px;
     background-color: #fff;
@@ -85,7 +81,7 @@ const Hamburger = styled.div`
 
   ::before {
     transform: ${props =>
-  props.open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
+      props.open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
     top: -10px;
   }
 
@@ -104,60 +100,53 @@ const Navbar = () => {
   //   })
   // }
 
-
   const navbarHandler = () => {
     console.log("=========")
     console.log("Prev: " + navbarOpen)
 
     setNavbarOpen(navbarOpen => !navbarOpen)
     console.log("Αfter: " + navbarOpen)
-
   }
 
   return (
+    <Headroom
+      disableInlineStyles
+      style={{
+        zIndex: 10,
+      }}
+    >
+      <Navigation>
+        <Logo />
 
-<Headroom disableInlineStyles>
-  
-  <Navigation  >
+        <Toggle
+          // Inside Toggle we put the button <Hamburger>
+          // Χ  It is <Hamburger open> when we press Toggle & navbarOpen is true
+          // ≡  It is just <Hamburger> when navbarOpen is false
+          // Navbox εμφανίζεται και εξαφανίζεται
 
-      <Logo />
-
-      <Toggle
-        // Inside Toggle we put the button <Hamburger>
-        // Χ  It is <Hamburger open> when we press Toggle & navbarOpen is true
-        // ≡  It is just <Hamburger> when navbarOpen is false
-        // Navbox εμφανίζεται και εξαφανίζεται
-
-        // navbarOpen = true (when the menu closes!!!)
-        navbarOpen={navbarOpen}
-        onClick = {navbarHandler}
-        // onClick={() => setNavbarOpen(!navbarOpen)}
-      >
-        {navbarOpen ? <Hamburger open /> : <Hamburger />}
-      </Toggle>
-      {navbarOpen ? (
+          // navbarOpen = true (when the menu closes!!!)
+          navbarOpen={navbarOpen}
+          onClick={navbarHandler}
+          // onClick={() => setNavbarOpen(!navbarOpen)}
+        >
+          {navbarOpen ? <Hamburger open /> : <Hamburger />}
+        </Toggle>
+        {navbarOpen ? (
           <Navbox>
-            
-            <NavbarLinks navbarHandler navbarOpen setNavbarOpen={setNavbarOpen} cellphonesize={navbarOpen}
-
-
-
+            <NavbarLinks
+              navbarHandler
+              navbarOpen
+              setNavbarOpen={setNavbarOpen}
+              cellphonesize={navbarOpen}
             />
           </Navbox>
-
-      ) : (
-
-        <Navbox  open>
-         
-          <NavbarLinks setNavbarOpen={setNavbarOpen} />
-        </Navbox>
-
-          )}
-
-
-    </Navigation>
-</Headroom>
-
+        ) : (
+          <Navbox open>
+            <NavbarLinks setNavbarOpen={setNavbarOpen} />
+          </Navbox>
+        )}
+      </Navigation>
+    </Headroom>
   )
 }
 

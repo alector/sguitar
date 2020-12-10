@@ -1,11 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { AnchorLink } from "gatsby-plugin-anchor-links";
-
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const NavItemWrap = styled.div`
-text-decoration:none;
+  text-decoration: none;
 `
 
 const NavItem = styled(Link)`
@@ -17,9 +16,8 @@ const NavItem = styled(Link)`
   margin: 0 1vw;
   transition: all 200ms ease-in;
   position: relative;
-  
-  color: #78757a;
 
+  color: #78757a;
 
   :after {
     position: absolute;
@@ -50,28 +48,28 @@ const NavItem = styled(Link)`
 `
 
 const newHandle = () => {
-   console.log("CLICKED!!!!")
-
+  console.log("CLICKED!!!!")
 }
-const NavbarLinks = (props) => {
+const NavbarLinks = props => {
   return (
     <>
       <NavItemWrap onClick={() => props.setNavbarOpen(false)}>
-        <NavItem to="/#biography" as={AnchorLink}>About</NavItem>
+        <NavItem to="/#bio-section" as={AnchorLink}>
+          About
+        </NavItem>
       </NavItemWrap>
 
       <NavItemWrap onClick={() => props.setNavbarOpen(false)}>
-        <NavItem as={AnchorLink}  to="/#social">Social</NavItem>
+        <NavItem as={AnchorLink} to="/#social-media-section">
+          Social
+        </NavItem>
       </NavItemWrap>
 
       <NavItemWrap onClick={() => props.setNavbarOpen(false)}>
-        <NavItem as={AnchorLink}  to="/#projects">Projects</NavItem>
+        <NavItem as={AnchorLink} to="/#argos-duo">
+          ARGOS DUO
+        </NavItem>
       </NavItemWrap>
-
-      <NavItemWrap onClick={() => props.setNavbarOpen(false)}>
-        <NavItem as={AnchorLink}  to="/#teaching">Teaching</NavItem>
-      </NavItemWrap>
-
     </>
   )
 }

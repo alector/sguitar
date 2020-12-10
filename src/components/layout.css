@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 html {
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -7,8 +9,308 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f7f7f7;
+  font-family: "Roboto", sans-serif;
 }
-article,
+
+#quote-section {
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  background-position: bottom center;
+  background-repeat: repeat-y;
+  background-size: cover;
+
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+}
+
+#quote-section .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  margin: auto;
+  /* border: 1px #534a4a solid; */
+  border-radius: 5px;
+  padding: 50px;
+  width: 50%;
+}
+
+#quote-section .container .quote-icon {
+  position: absolute;
+  left: -80px;
+}
+#quote-section .container .text {
+  font-size: 2rem;
+  color: #534a4a;
+  font-weight: bold;
+}
+
+#quote-section .container .horizontal-bar {
+  margin-top: 20px;
+  height: 5px;
+  background-color: #534a4a;
+  width: 30%;
+}
+
+#quote-section .container .author {
+  margin-top: 5px;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+#bio-section {
+  /* border: 5px #000 solid; */
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  /* margin-bottom: 200px; */
+}
+#bio-section .left-column {
+  clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
+  font-family: "Roboto", sans-serif;
+  width: 70%;
+  background-color: #ffffff;
+  padding: 5%;
+  padding-top: 240px;
+}
+
+#bio-section .right-column {
+  clip-path: polygon(3% 8%, 80% 0, 100% 100%, 0% 100%);
+  /* clip-path: polygon(0 19%, 100% 0, 92% 89%, 0 91%); */
+
+  position: absolute;
+  top: -40px;
+  width: 400px;
+  /* border: 2px #534a4a solid; */
+  padding: 0px;
+  vertical-align: bottom;
+}
+
+#bio-section .left-column .title {
+  font-size: 2.3rem;
+  color: #534a4a;
+  font-weight: bold;
+}
+
+#bio-section .left-column p {
+  margin-top: 20px;
+  font-weight: 300;
+}
+
+#bio-section .left-column p {
+  font-size: 1.3rem;
+  color: ##534a4a;
+}
+
+#bio-section .conservatoire-logo {
+  width: 300px;
+  margin-top: 40px;
+  margin-right: 20px;
+  margin-left: auto;
+}
+
+#social-media-section {
+  width: 100%;
+  /* border: 4px #3936ec solid; */
+  height: 100vh;
+  display: flex;
+  padding: 0;
+
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+}
+
+#social-media-section .left-column {
+  width: 40%;
+}
+
+#social-media-section .right-column {
+  width: 40%;
+  padding-top: 10vh;
+  margin-left: 100px;
+}
+
+.instagram-logo {
+  margin-top: 40px;
+  width: 100%;
+  object-fit: fill;
+  object-position: 50% 50%;
+}
+#social-media-section2::before {
+  /* Pseudo element will only render if it has a content property */
+  content: "";
+  /* Overlay should occupy the full width and height of parent image container */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* Overlay background-color */
+  background-color: #775555;
+  /* Overlay opacity, else overlay won't be transparent and show the image */
+  opacity: 0.8;
+  -webkit-transition: opacity 200ms linear;
+  -moz-transition: opacity 200ms linear;
+  -o-transition: opacity 200ms linear;
+  -ms-transition: opacity 200ms linear;
+  transition: opacity 200ms linear;
+}
+
+/* argos duo === */
+
+#argos-duo {
+  display: flex;
+  justify-content: space-around;
+  /* padding-top: 100px; */
+  position: relative;
+}
+
+#argos-duo .left .blank-upper {
+  height: 60px;
+}
+
+#argos-duo .right .blank-upper {
+  height: 100px;
+}
+
+#fr-logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#argos-duo .france-musique-logo {
+  margin: auto;
+  position: absolute;
+  top: 60px;
+  z-index: 1;
+  width: 50%;
+  object-fit: cover;
+  overflow: visible inportant!;
+}
+
+#argos-duo .right .lower {
+  clip-path: polygon(0 7%, 100% 0, 100% 100%, 0% 100%);
+  background: #ffffff;
+}
+#argos-duo .left {
+  width: 60%;
+}
+
+#argos-duo .right {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+#argos-duo .left .upper {
+  padding: 50px;
+  padding-top: 100px;
+  display: flex;
+  margin-top: 60px;
+  align-items: flex-end;
+
+  clip-path: polygon(0 24%, 100% 0, 100% 100%, 0% 100%);
+  background: #ffffff;
+}
+
+#argos-duo .left .title {
+  width: 40%;
+  font-size: 2.3rem;
+  color: #534a4a;
+  font-weight: bold;
+}
+
+#argos-duo .left .names {
+  margin-left: 50px;
+  font-size: 1.3rem;
+  color: #534a4a;
+}
+
+#argos-duo .red {
+  width: 100%;
+  height: 20px;
+  background-color: #ad001b;
+}
+
+/* ARGOS DUO RIGHT ================ */
+#argos-duo .right {
+  position: relative;
+  overflow: visible;
+}
+
+#argos-duo .right .lower {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#argos-duo .right .title {
+  padding-top: 40%;
+  padding-bottom: 10%;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ad001b;
+  margin: auto;
+}
+
+.fr-music-play {
+  width: 100%;
+}
+
+.argos-video-frame {
+  height: 400px;
+}
+
+/* MEDIA ===================== */
+@media (max-width: 1000px) {
+  #argos-duo {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #argos-duo .left {
+    width: 80%;
+    margin: auto;
+  }
+
+  #argos-duo .right {
+    width: 80%;
+    margin: auto;
+  }
+
+  .names {
+    margin-left: 50px;
+  }
+
+  .name {
+    margin-bottom: 10px;
+  }
+
+  #social-media-section {
+    width: 100%;
+    /* border: 4px #3936ec solid; */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+  }
+
+  #social-media-section .left-column {
+    width: 40%;
+  }
+
+  #social-media-section .right-column {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .instagram-logo {
+    width: 60%;
+  }
+}
+
+/* article,
 aside,
 details,
 figcaption,
@@ -94,7 +396,6 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
   font-size: 1em;
 }
 figure {
@@ -200,7 +501,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: "Roboto", sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -619,4 +920,4 @@ pre tt:after {
   html {
     font-size: 100%;
   }
-}
+} */
