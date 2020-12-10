@@ -31,14 +31,22 @@ const MainBio = ({ className }) => {
         <div className="title">Sotiris Athanasiou</div>
         <div className="text">
           <p>
-            Sotiris started learning the guitar at the age of 4 with his father,
-            he graduated from the Conservatory of Macedonia in the class of
-            Fotis Baxes with the highest honors. The Conservatoire of Bordeaux
-            was his next stop and after a brief span in Seville in the class of
-            Francisco Bernier he graduated from the Conservatoire de Paris with
-            the highest honors in the classs of Olivier Chassain. Today he is
-            pursuing his Master in the Conservatoire with Tristan Manoukian.
+            Born into a musical family and forged into the heart of Paris,
+            Sotiris is following a path accompanied by the guitar from the very
+            start that rests unchanged till this day. His repertoire is starting
+            from the 16th century and reaches to music written today where he
+            collaborates with new composers searching to expand the repertoire
+            of the instrument. Appreciated by artists in his second home of the
+            French capital he has been hailed for his original musicality and
+            technique on the guitar. Edith Lejet (Prix de Rome) after listening
+            to his interpretation of her own music wrote...
           </p>
+
+          <quote>
+            "I was delighted to meet the beauty and the extreme variety of
+            sounds that Sotiris is able to transmit with his instrument".
+          </quote>
+
           <p>
             In 2020 a new chapter has been started in Sotiris’s life with the
             creation of the ”Argos Duo’’with the accordionist Julien Beautemps

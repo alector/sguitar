@@ -59,7 +59,7 @@ const MainArgosDuo = ({ className }) => {
               <strong>Julien Beautemps</strong>, accordéon
             </p>
             <p className="name">
-              <strong>Sotiris Athanasiou</strong>, guitare électrique
+              <strong>Sotiris Athanasiou</strong>, guitare
             </p>
           </div>
         </div>
