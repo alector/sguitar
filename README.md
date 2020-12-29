@@ -2,7 +2,7 @@
 
 ## 2020 ARGOS DUO Project
 
-Website for [SotirisGuitar.com ](sotirisguitar.com )
+Website for [SotirisGuitar.com ](https://www.sotirisguitar.com/)
 
 > Personal platform created to promote Σoritirs and the ARGOS DUO project, as featured in France Musique, 5 December 2020 [France Musique](https://www.francemusique.fr/emissions/generations-france-musique-le-live/carte-blanche-a-philippe-cassard-avec-natalie-dessay-89460).   
 
